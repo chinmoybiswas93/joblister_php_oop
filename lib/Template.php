@@ -1,4 +1,4 @@
-<?php 
+<?php
 class Template
 {
     protected $template;
@@ -41,4 +41,3 @@ class Template
         return $output;
     }
 }
-?>

@@ -31,7 +31,7 @@ class Job
     }
 
     // get all job in a category with id
-    public function getAllJobsByCategory($id)
+    public function getAllJobsByCategoryId($id)
     {
         $this->db->query("SELECT jobs.*, categories.name AS category_name 
             FROM jobs 
@@ -43,5 +43,14 @@ class Job
 
         $this->db->execute();
         return $this->db->resultSet();
+    }
+
+    // get all job in a category with id
+    public function getCategory($category_id)
+    {
+        $this->db->query("SELECT * FROM categories WHERE id = :category_id");
+        $this->db->bind(':category_id', $category_id);
+        $row = $this->db->single();
+        return $row;
     }
 }

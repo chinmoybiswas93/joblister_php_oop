@@ -3,16 +3,17 @@
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light"> <?php echo $title ?> </h1>
+            <h1 style="text-transform: capitalize;" class="fw-light"> <?php echo $title ?> </h1>
             <p class="lead text-body-secondary"> <?php echo $subtitle; ?> </p>
-            <form action="">
+            <form method="GET" action="index.php">
                 <p>
-                    <select class="form-select select-category" aria-label="Category Select">
-                        <option value="0" selected>All Jobs</option>
-                        <?php foreach ($categories as $categorie) : ?>
-                            <option class="text" value="<?php echo $categorie->id; ?>"><?php echo $categorie->name; ?></option>
+                    <select style="text-transform: capitalize;" name="category" class="form-select select-category" aria-label="Category Select">
+                        <option value="0">All Jobs</option>
+                        <?php foreach ($categories as $category) : ?>
+                            <option style="text-transform: capitalize;" class="text" value="<?php echo $category->id; ?>" <?php echo ($category->id == $selected_category) ? 'selected' : ''; ?>><?php echo $category->name; ?></option>
                         <?php endforeach; ?>
                     </select>
+
                     <!-- <input type="submit" name="Hello" class="btn btn-primary my-2" /> -->
                     <button type="submit" class="btn btn-primary mt-4">See Jobs</button>
                 </p>
@@ -24,7 +25,6 @@
 <!-- Listings -->
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
-        <?php var_dump($techjobs); ?>
         <!-- listing row -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <?php foreach ($jobs as $job) : ?>
