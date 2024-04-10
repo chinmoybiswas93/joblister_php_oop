@@ -41,7 +41,7 @@
                             <p><?php echo $job->description; ?></p>
                             <div class="d-flex justify-content-end align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <a href="/joblister/job.php?id=<?php echo $job->id ?>" class="btn btn-sm btn-outline-secondary">View</a>
                                 </div>
                             </div>
                         </div>

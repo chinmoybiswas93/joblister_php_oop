@@ -53,4 +53,13 @@ class Job
         $row = $this->db->single();
         return $row;
     }
+
+    // get single job with id
+    public function getJob($id)
+    {
+        $this->db->query("SELECT * FROM jobs WHERE id = :id");
+        $this->db->bind(':id', $id);
+        $row = $this->db->single();
+        return $row;
+    }
 }

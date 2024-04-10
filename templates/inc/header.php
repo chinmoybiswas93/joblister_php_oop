@@ -157,12 +157,12 @@
     <header data-bs-theme="dark">
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container align-items-center">
-                <a href="#" class="navbar-brand d-flex align-items-center">
+                <a href="/joblister" class="navbar-brand d-flex align-items-center">
                     <strong>Job Lister</strong>
                 </a>
                 <div class="d-flex gap-2">
                     <ul class="list-unstyled d-flex gap-4 align-items-center mb-0">
-                        <li><a href="#" class="text-white text-decoration-none">View Jobs</a></li>
+                        <li><a href="/joblister" class="text-white text-decoration-none">View Jobs</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Create Jobs</a></li>
                     </ul>
                 </div>
